@@ -34,8 +34,8 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 update manager set salary=salary+(salary*0.10);
 ```
 ### OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/4738a852-02cd-4151-8be2-588950155f29)
 
+![1](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/39346a82-c178-4052-855a-b87accbd0875)
 
 ### Q2) Delete the records from manager table where the salary less than 2750.
 ### QUERY:
@@ -43,7 +43,9 @@ update manager set salary=salary+(salary*0.10);
 delete from manager where salary<2750;
 ```
 ### OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/d2be0414-24ee-4b80-adff-9f460eecf4b3)
+
+
+![2](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/fbee1a81-d09c-4025-89bb-26dd72695719)
 
 ### Q3) Display each name of the employee as “Name” and annual salary as “Annual Salary” (Note: Salary in emp table is the monthly salary)
 ### QUERY:
@@ -51,7 +53,8 @@ delete from manager where salary<2750;
 select ename as "Name",salary*12 as "Annual salary" from manager;
 ```
 ### OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/df530ca0-5799-4f6c-88d3-db510541c2ce)
+
+![3](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/497e6a2a-acb6-4f0a-9f3f-17c23640131c)
 
 ### Q4) List the names of Clerks from emp table.
 ### QUERY:
@@ -59,7 +62,9 @@ select ename as "Name",salary*12 as "Annual salary" from manager;
 select ename from manager where designation='clerk';
 ```
 ### OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/11a90688-1500-4c78-8615-4b61e24450ac)
+
+![4](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/496d93d7-e532-49a6-8a6c-d66819f9ebd3)
+
 
 ### Q5)	List the names of employee who are not Managers.
 ### QUERY:
@@ -67,7 +72,8 @@ select ename from manager where designation='clerk';
 select ename from manager where designation <> 'manager';
 ```
 ### OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/f9c1460c-fa6d-41b7-acf2-1c5ef18b2d87)
+
+![5](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/380f67f6-07e1-4e29-af04-5670ed0c93f4)
 
 ### Q6)	List the names of employees not eligible for commission.
 ### QUERY:
@@ -75,7 +81,9 @@ select ename from manager where designation <> 'manager';
 select ename from manager where commission=0;
 ```
 ### OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/ab677878-c633-43ff-a7eb-9a85d6a38658)
+
+![6](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/e3bc645b-2262-4b35-bf97-ec9180032f4d)
+
 
 ### Q7)	List employees whose name either start or end with ‘s’
 ### QUERY:
@@ -83,7 +91,9 @@ select ename from manager where commission=0;
 select ename from manager where ename like '%s' or ename like 's%';
 ```
 ### OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/1383f0ea-fde9-484d-8fd5-cf17b5f175aa)
+
+![7](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/860c0da2-6f0f-41d4-9f7b-3a882119b8ac)
+
 
 ### Q8) Sort emp table in ascending order by hire-date and list ename, job, deptno and hire-date.
 ### QUERY:
@@ -91,7 +101,9 @@ select ename from manager where ename like '%s' or ename like 's%';
 select ename,designation as "job",deptno,hiredate from manager order by hiredate asc;
 ```
 ### OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/dca8955f-6d28-4cef-9d7a-1eefe6552a1d)
+
+![8](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/8030f064-4de8-44fb-9ff3-3a502d4ac9b4)
+
 
 ### Q9) List the Details of Employees who have joined before 30 Sept 81.
 ### QUERY:
@@ -99,7 +111,9 @@ select ename,designation as "job",deptno,hiredate from manager order by hiredate
 select * from manager where hiredate<to_date('1981-09-30','YYYY-MM-DD');
 ```
 ### OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/a45671c2-0bee-453b-9771-c4aaf650aa38)
+
+![9](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/51846899-5f81-41e1-b784-4c54deef2201)
+
 
 ### Q10)	List ename, deptno and sal after sorting emp table in ascending order by deptno and then descending order by sal.
 ### QUERY:
@@ -107,7 +121,9 @@ select * from manager where hiredate<to_date('1981-09-30','YYYY-MM-DD');
 select ename,deptno,salary from manager order by deptno asc,salary desc;
 ```
 ### OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/190fda6c-1b0b-4cbe-ba49-4fb54ce029eb)
+
+![10](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/ca9fcc45-9f9c-47f4-ad8f-c9c714787af3)
+
 
 ### Q11) List the names of employees not belonging to dept no 30,40 & 10
 ### QUERY:
@@ -115,7 +131,9 @@ select ename,deptno,salary from manager order by deptno asc,salary desc;
 select ename from manager where deptno not in (30,40,10);
 ```
 ### OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/69c77793-fa68-45f5-aa14-3f9eac85eb37)
+
+![11](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/5b8db385-e0e5-4ca6-86a3-b44f4b516ac8)
+
 
 ### Q12) Find number of rows in the table EMP
 ### QUERY:
@@ -123,7 +141,9 @@ select ename from manager where deptno not in (30,40,10);
 select count(*) from manager;
 ```
 ### OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/0eba97ad-bb9a-4271-a554-6b8aa3354b4f)
+
+![12](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/57f2975f-c94e-489e-a718-aaaf83ef9f35)
+
 
 ### Q13) Find maximum, minimum and average salary in EMP table.
 ### QUERY:
@@ -132,21 +152,26 @@ select count(*) from manager;
 select max(salary) from manager;
 ```
 ### OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/ff11d145-eed4-4868-8d15-17366062963b)
+
+![13 1](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/80cbf32b-b27f-4cfb-8ea2-4a890190f5c6)
+
 
 ## MINIMUM:
 ```
 select min(salary) from manager;
 ```
 ## OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/67bf19f6-05e7-400d-aa94-c01ba7c9835d)
+
+![13 2](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/87bc6e28-e621-433d-ab07-3029609edc20)
+
 
 ## AVERAGE:
 ```
 select avg(salary) from manager;
 ```
 ## OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/99409376-57f9-4b29-8e85-6eec868ff205)
+
+![13 3](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/51284610-cbde-4ca2-92ad-ba32a5d873bb)
 
 ### Q14) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
 
@@ -155,7 +180,9 @@ select avg(salary) from manager;
 SELECT designation AS job, COUNT(*) AS num_employees FROM manager GROUP BY designation ORDER BY num_employees DESC;
 ```
 ### OUTPUT:
-![image](https://github.com/BharathCSEIOT/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122793480/e16c9bf7-c965-4e1b-aa78-cd0481c32024)
+
+![14](https://github.com/gururamu08/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118707009/c9b6b86f-f5c5-408a-bdf9-7572a7ca1c46)
+
 
 ### Name : GURUMOORTHI
 ### Register no:212222230042
